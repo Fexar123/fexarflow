@@ -5,8 +5,19 @@ A B2B SaaS that runs the daily operations of a freight forwarding company: clien
 Designed and built solo, Dec 2025 – Apr 2026.
 **The source code is private** (commercial project). This page describes what the system does and how it is built; I'm happy to walk through the code and architecture on a call.
 
+## Screenshots
+
+**AI Inbox** — incoming client requests and carrier replies parsed by an LLM: route, cargo and target price are extracted, carrier quotes are collected side by side, and a deal can be turned into an order in one click.
+
+![AI Inbox](docs/ai-inbox.webp)
+
+**Dashboard** — active orders, revenue by period, payments awaited.
+
+![Dashboard](docs/dashboard.png)
+
 ## What it does
 
+- **AI Inbox** — LLM analysis of email threads with clients and carriers: extracts route, cargo and target price, collects carrier quotes, tracks negotiation status, creates an order from the chosen quote.
 - **Orders** — transport orders with client and carrier sides, automatic profit and margin calculation, soft delete, order completion workflow.
 - **Documents & payments** — transport order and invoice PDFs generated on the client, payment-deadline tracking.
 - **Contacts** — clients and carriers, bank details validation, search, filters, pagination.
